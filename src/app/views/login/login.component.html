@@ -1,0 +1,21 @@
+<div class="ui-flex-container break-on-s960">
+  <ui-input-container>
+      <input type="text" [(ngModel)]="user" uiInput>
+      <label>Nick name</label>
+  </ui-input-container>
+
+  <ui-card-title>Language</ui-card-title>
+  	<ui-input-container>	
+    <ui-select 
+      #selectField="ngModel" 
+      name="language" 
+      [(ngModel)]="language" 
+      (ngModelChange)="onChangeModel()" 
+      [chosen]="true" 
+      [options]="allLanguages" 
+      value="value" 
+      label="name">
+    </ui-select>
+</ui-input-container>
+<button (click)="goToChat()" class="ui-button raised primary" uiRipple>Raised Primary</button>
+</div>
